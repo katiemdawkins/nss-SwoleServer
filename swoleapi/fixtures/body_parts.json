@@ -1,0 +1,51 @@
+[
+    {
+        "model": "swole.body_part",
+        "pk": 1,
+        "fields": {
+            "label": "Legs"
+        }
+    },
+    {
+        "model": "swole.body_part",
+        "pk": 2,
+        "fields": {
+            "label": "Core"
+        }
+    },
+    {
+        "model": "swole.body_part",
+        "pk": 3,
+        "fields": {
+            "label": "Back"
+        }
+    },
+    {
+        "model": "swole.body_part",
+        "pk": 4,
+        "fields": {
+            "label": "Chest"
+        }
+    },
+    {
+        "model": "swole.body_part",
+        "pk": 5,
+        "fields": {
+            "label": "Arms"
+        }
+    },
+    {
+        "model": "swole.body_part",
+        "pk": 6,
+        "fields": {
+            "label": "Shoulders"
+        }
+    },
+    {
+        "model": "swole.body_part",
+        "pk": 7,
+        "fields": {
+            "label": "Full Body"
+        }
+    }
+]

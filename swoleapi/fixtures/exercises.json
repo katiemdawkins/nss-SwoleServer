@@ -1,0 +1,13 @@
+[
+    {
+        "model": "swoleapi.exercise",
+        "pk": 1,
+        "fields": {
+            "name": "",
+            "description": "",
+            "image_url": "",
+            "body_part": 1,
+            "category": 1
+        }
+    }
+]

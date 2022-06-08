@@ -1,0 +1,51 @@
+[
+    {
+        "model": "swoleapi.category",
+        "pk": 1,
+        "fields": {
+            "label": "Barbell"
+        }
+    },
+    {
+        "model": "swoleapi.category",
+        "pk": 2,
+        "fields": {
+            "label": "Kettlebell"
+        }
+    },
+    {
+        "model": "swoleapi.category",
+        "pk": 3,
+        "fields": {
+            "label": "Dumbbell"
+        }
+    },
+    {
+        "model": "swoleapi.category",
+        "pk": 4,
+        "fields": {
+            "label": "Suspension Trainer"
+        }
+    },
+    {
+        "model": "swoleapi.category",
+        "pk": 5,
+        "fields": {
+            "label": "Bodyweight"
+        }
+    },
+    {
+        "model": "swoleapi.category",
+        "pk": 6,
+        "fields": {
+            "label": "Machine"
+        }
+    },
+    {
+        "model": "swoleapi.category",
+        "pk": 7,
+        "fields": {
+            "label": "Cardio"
+        }
+    }
+]
