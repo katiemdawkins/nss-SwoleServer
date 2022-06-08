@@ -1,0 +1,26 @@
+[
+    {
+        "model": "swoleapi.exercise_note",
+        "pk": 1,
+        "fields": {
+            "description": "This felt solid today.",
+            "exercise_in_session": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise_note",
+        "pk": 2,
+        "fields": {
+            "description": "Felt ok",
+            "exercise_in_session": 8
+        }
+    },
+    {
+        "model": "swoleapi.exercise_note",
+        "pk": 3,
+        "fields": {
+            "description": "Deads felt good.",
+            "exercise_in_session": 15
+        }
+    }
+]

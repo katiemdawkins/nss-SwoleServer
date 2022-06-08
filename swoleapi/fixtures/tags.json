@@ -1,0 +1,122 @@
+[
+    {
+        "model": "swoleapi.tag",
+        "pk": 1,
+        "fields": {
+            "label": "PR"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 2,
+        "fields": {
+            "label": "Yay"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 3,
+        "fields": {
+            "label": "Sad"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 4,
+        "fields": {
+            "label": "Blah"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 5,
+        "fields": {
+            "label": "Garbage"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 6,
+        "fields": {
+            "label": "So Swole!"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 7,
+        "fields": {
+            "label": "Whoosh that was a lot"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 8,
+        "fields": {
+            "label": "Adjusted for injury"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 9,
+        "fields": {
+            "label": "Adjusted for equipment"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 10,
+        "fields": {
+            "label": "Adjusted for soreness"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 11,
+        "fields": {
+            "label": "Traveling Session"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 12,
+        "fields": {
+            "label": "Going through the motions"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 13,
+        "fields": {
+            "label": "Tough, but doable"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 14,
+        "fields": {
+            "label": "Mistake"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 15,
+        "fields": {
+            "label": "Fail"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 16,
+        "fields": {
+            "label": "Oops"
+        }
+    },
+    {
+        "model": "swoleapi.tag",
+        "pk": 17,
+        "fields": {
+            "label": "Challenging"
+        }
+    }
+
+]

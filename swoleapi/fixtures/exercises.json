@@ -3,11 +3,420 @@
         "model": "swoleapi.exercise",
         "pk": 1,
         "fields": {
-            "name": "",
-            "description": "",
-            "image_url": "",
+            "name": "Deadlift Conventional",
+            "description": "Approach the bar with feet about hips' distance apart with mid foot under the bar. Find tension and hinge from the hips. Grip should be at shoulder width just outside the knees.  Stand up and pull hips to the bar. Hips reach back and shoulders come forward as you lower. Hips and shoulders move together.",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
             "body_part": 1,
             "category": 1
         }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 2,
+        "fields": {
+            "name": "Deadlift Sumo",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 1,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 3,
+        "fields": {
+            "name": "Deadlift TrapBar",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 1,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 4,
+        "fields": {
+            "name": "Bench Close Grip",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 5,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 5,
+        "fields": {
+            "name": "Bench Wide Grip",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 4,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 6,
+        "fields": {
+            "name": "Bench Spoto",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 4,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 7,
+        "fields": {
+            "name": "Military Press",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 6,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 8,
+        "fields": {
+            "name": "Push Press",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 6,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 9,
+        "fields": {
+            "name": "Push Jerk",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 6,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 10,
+        "fields": {
+            "name": "Squat Front",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 1,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 11,
+        "fields": {
+            "name": "Squat Back",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 1,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 12,
+        "fields": {
+            "name": "Landmine Row",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 3,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 13,
+        "fields": {
+            "name": "Pendlay Row",
+            "description": "1. Approach the bar ",
+            "image_url": "https://us.123rf.com/450wm/imogi/imogi1805/imogi180500213/102169933-vintage-barbell-for-bodybuilding-icon.jpg?ver=6",
+            "body_part": 3,
+            "category": 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 14,
+        "fields": {
+            "name": "Swing 2 Hand",
+            "description": "Approach the bell ",
+            "image_url": "💪",
+            "body_part": 7,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 15,
+        "fields": {
+            "name": "Swing Single Arm",
+            "description": "Approach the bell ",
+            "image_url": "💪",
+            "body_part": 7,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 16,
+        "fields": {
+            "name": "Snatch Single Arm",
+            "description": "Approach the bell ",
+            "image_url": "",
+            "body_part": 7,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 17,
+        "fields": {
+            "name": "Snatch Double Bell",
+            "description": "Approach the bells ",
+            "image_url": "💪",
+            "body_part": 7,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 18,
+        "fields": {
+            "name": "Clean Single Arm",
+            "description": "Approach the bell ",
+            "image_url": "💪",
+            "body_part": 7,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 19,
+        "fields": {
+            "name": "Clean Double Bell",
+            "description": "Approach the bell ",
+            "image_url": "💪",
+            "body_part": 7,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 20,
+        "fields": {
+            "name": "Deadlift",
+            "description": "Approach the bell ",
+            "image_url": "💪",
+            "body_part": 1,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 21,
+        "fields": {
+            "name": "Deadlift Double Bell",
+            "description": "Approach the bell ",
+            "image_url": "💪",
+            "body_part": 1,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 22,
+        "fields": {
+            "name": "Press Single Arm",
+            "description": "Approach the bell ",
+            "image_url": "💪",
+            "body_part": 6,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 23,
+        "fields": {
+            "name": "Press Double Bell",
+            "description": "Approach the bell ",
+            "image_url": "💪",
+            "body_part": 6,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 24,
+        "fields": {
+            "name": "Gorilla Row",
+            "description": "Approach the bell ",
+            "image_url": "💪",
+            "body_part": 3,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 25,
+        "fields": {
+            "name": "Bent Press",
+            "description": "Approach the bell ",
+            "image_url": "💪",
+            "body_part": 7,
+            "category": 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 26,
+        "fields": {
+            "name": "Row",
+            "description": "Grip the suspension trainer handles and lean back. ",
+            "image_url": "💪",
+            "body_part": 3,
+            "category": 4
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 27,
+        "fields": {
+            "name": "Pushup",
+            "description": "Find a plank position with hands on the floor or elevated. ",
+            "image_url": "💪",
+            "body_part": 4,
+            "category": 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 28,
+        "fields": {
+            "name": "Pull Up",
+            "description": "Approach the bar.",
+            "image_url": "💪",
+            "body_part": 3,
+            "category": 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 29,
+        "fields": {
+            "name": "Chin Up ",
+            "description": "Approach the bar.",
+            "image_url": "💪",
+            "body_part": 3,
+            "category": 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 30,
+        "fields": {
+            "name": "Biceps Curl",
+            "description": "Stand with your dumbbells at your side.",
+            "image_url": "💪",
+            "body_part": 5,
+            "category": 3
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 31,
+        "fields": {
+            "name": "Triceps Push Down",
+            "description": "Choose your attachment for the cable machine: straight bar or rope.",
+            "image_url": "💪",
+            "body_part": 5,
+            "category": 6
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 32,
+        "fields": {
+            "name": "Face Pull",
+            "description": "With the rope attachment, pull the hands towards the ears using the upper back.",
+            "image_url": "💪",
+            "body_part": 3,
+            "category": 6
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 33,
+        "fields": {
+            "name": "Battle Ropes",
+            "description": "Attach the rope to a stable anchor point.",
+            "image_url": "💪",
+            "body_part": 7,
+            "category": 7
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 34,
+        "fields": {
+            "name": "Run",
+            "description": "Lace up your shoes.",
+            "image_url": "💪",
+            "body_part": 7,
+            "category": 7
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 35,
+        "fields": {
+            "name": "Skate",
+            "description": "Put on your skates and gooooo.",
+            "image_url": "💪",
+            "body_part": 7,
+            "category": 7
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 36,
+        "fields": {
+            "name": "Rowing",
+            "description": "Set up on a rower",
+            "image_url": "💪",
+            "body_part": 7,
+            "category": 7
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 37,
+        "fields": {
+            "name": "Ab Roll out",
+            "description": "Grip the suspension trainer handles and roll forward. ",
+            "image_url": "💪",
+            "body_part": 2,
+            "category": 4
+        }
+    },
+    {
+        "model": "swoleapi.exercise",
+        "pk": 38,
+        "fields": {
+            "name": "Plank ",
+            "description": "From the floor, set shoulders over hips and step the feet back.",
+            "image_url": "💪",
+            "body_part": 2,
+            "category": 5
+        }
     }
+
+
 ]

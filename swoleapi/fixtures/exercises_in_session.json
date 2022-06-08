@@ -1,0 +1,575 @@
+[
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 1,
+        "fields": {
+            "set_number": 1,
+            "load": 115,
+            "reps": 5,
+            "exercise": 11, 
+            "session" : 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 2,
+        "fields": {
+            "set_number": 2,
+            "load": 115,
+            "reps": 5,
+            "exercise": 11, 
+            "session" : 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 3,
+        "fields": {
+            "set_number": 3,
+            "load": 115,
+            "reps": 5,
+            "exercise": 11, 
+            "session" : 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 4,
+        "fields": {
+            "set_number": 4,
+            "load": 115,
+            "reps": 5,
+            "exercise": 11, 
+            "session" : 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 5,
+        "fields": {
+            "set_number": 1,
+            "load": 70,
+            "reps": 3,
+            "exercise": 7, 
+            "session" : 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 6,
+        "fields": {
+            "set_number": 2,
+            "load": 70,
+            "reps": 3,
+            "exercise": 7, 
+            "session" : 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 7,
+        "fields": {
+            "set_number": 3,
+            "load": 70,
+            "reps": 3,
+            "exercise": 7, 
+            "session" : 1
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 8,
+        "fields": {
+            "set_number": 1,
+            "load": 145,
+            "reps": 2,
+            "exercise": 11, 
+            "session" : 4
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 9,
+        "fields": {
+            "set_number": 2,
+            "load": 145,
+            "reps": 2,
+            "exercise": 11, 
+            "session" : 4
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 10,
+        "fields": {
+            "set_number": 3,
+            "load": 145,
+            "reps": 2,
+            "exercise": 11, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 11,
+        "fields": {
+            "set_number": 4,
+            "load": 145,
+            "reps": 2,
+            "exercise": 11, 
+            "session" : 4
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 12,
+        "fields": {
+            "set_number": 1,
+            "load": 75,
+            "reps": 2,
+            "exercise": 7, 
+            "session" : 4
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 13,
+        "fields": {
+            "set_number": 2,
+            "load": 75,
+            "reps": 2,
+            "exercise": 7, 
+            "session" : 4
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 14,
+        "fields": {
+            "set_number": 3,
+            "load": 75,
+            "reps": 2,
+            "exercise": 7, 
+            "session" : 4
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 15,
+        "fields": {
+            "set_number": 1,
+            "load": 160,
+            "reps": 5,
+            "exercise": 1, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 16,
+        "fields": {
+            "set_number": 2,
+            "load": 160,
+            "reps": 5,
+            "exercise": 1, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 17,
+        "fields": {
+            "set_number": 3,
+            "load": 160,
+            "reps": 5,
+            "exercise": 1, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 18,
+        "fields": {
+            "set_number": 1,
+            "load": 75,
+            "reps": 5,
+            "exercise": 5, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 19,
+        "fields": {
+            "set_number": 2,
+            "load": 75,
+            "reps": 5,
+            "exercise": 5, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 20,
+        "fields": {
+            "set_number": 3,
+            "load": 75,
+            "reps": 5,
+            "exercise": 5, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 21,
+        "fields": {
+            "set_number": 1,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 22,
+        "fields": {
+            "set_number": 2,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 23,
+        "fields": {
+            "set_number": 3,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 24,
+        "fields": {
+            "set_number": 4,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 25,
+        "fields": {
+            "set_number": 5,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 26,
+        "fields": {
+            "set_number": 6,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 2
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session", 
+        "pk": 27,
+        "fields": {
+            "set_number": 1,
+            "load": 175,
+            "reps": 3,
+            "exercise": 1, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 28,
+        "fields": {
+            "set_number": 2,
+            "load": 175,
+            "reps": 3,
+            "exercise": 1, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 29,
+        "fields": {
+            "set_number": 3,
+            "load": 175,
+            "reps": 3,
+            "exercise": 1, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 30,
+        "fields": {
+            "set_number": 1,
+            "load": 65,
+            "reps": 7,
+            "exercise": 5, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 31,
+        "fields": {
+            "set_number": 2,
+            "load": 65,
+            "reps": 7,
+            "exercise": 5, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 32,
+        "fields": {
+            "set_number": 3,
+            "load": 65,
+            "reps": 7,
+            "exercise": 5, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 33,
+        "fields": {
+            "set_number": 1,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 34,
+        "fields": {
+            "set_number": 2,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 35,
+        "fields": {
+            "set_number": 3,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 36,
+        "fields": {
+            "set_number": 4,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 37,
+        "fields": {
+            "set_number": 5,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 38,
+        "fields": {
+            "set_number": 6,
+            "load": 55,
+            "reps": 10,
+            "exercise": 14, 
+            "session" : 5
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 39,
+        "fields": {
+            "set_number": 1,
+            "load": 0,
+            "reps": 8,
+            "exercise": 37, 
+            "session" : 3
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 40,
+        "fields": {
+            "set_number": 2,
+            "load": 0,
+            "reps": 8,
+            "exercise": 37, 
+            "session" : 3
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 41,
+        "fields": {
+            "set_number": 3,
+            "load": 0,
+            "reps": 8,
+            "exercise": 37, 
+            "session" : 3
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 42,
+        "fields": {
+            "set_number": 1,
+            "load": 0,
+            "reps": 5,
+            "exercise": 28, 
+            "session" : 3
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 43,
+        "fields": {
+            "set_number": 2,
+            "load": 0,
+            "reps": 5,
+            "exercise": 28, 
+            "session" : 3
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 44,
+        "fields": {
+            "set_number": 3,
+            "load": 0,
+            "reps": 5,
+            "exercise": 28, 
+            "session" : 3
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 45,
+        "fields": {
+            "set_number": 4,
+            "load": 0,
+            "reps": 5,
+            "exercise": 28, 
+            "session" : 3
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 46,
+        "fields": {
+            "set_number": 1,
+            "load": 0,
+            "reps": 8,
+            "exercise": 37, 
+            "session" : 6
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 47,
+        "fields": {
+            "set_number": 2,
+            "load": 0,
+            "reps": 8,
+            "exercise": 37, 
+            "session" : 6
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 48,
+        "fields": {
+            "set_number": 3,
+            "load": 0,
+            "reps": 8,
+            "exercise": 37, 
+            "session" : 6
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 49,
+        "fields": {
+            "set_number": 1,
+            "load": 0,
+            "reps": 5,
+            "exercise": 28, 
+            "session" : 6
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 50,
+        "fields": {
+            "set_number": 2,
+            "load": 0,
+            "reps": 5,
+            "exercise": 28, 
+            "session" : 6
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 51,
+        "fields": {
+            "set_number": 3,
+            "load": 0,
+            "reps": 5,
+            "exercise": 28, 
+            "session" : 6
+        }
+    },
+    {
+        "model": "swoleapi.exercise_in_session",
+        "pk": 52,
+        "fields": {
+            "set_number": 4,
+            "load": 0,
+            "reps": 5,
+            "exercise": 28, 
+            "session" : 6
+        }
+    }
+
+]

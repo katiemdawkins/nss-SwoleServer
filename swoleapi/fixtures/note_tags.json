@@ -1,0 +1,42 @@
+[
+    {
+        "model": "swoleapi.note_tag",
+        "pk": 1,
+        "fields": {
+            "note": 1,
+            "tag": 2
+        }
+    },
+    {
+        "model": "swoleapi.note_tag",
+        "pk": 2,
+        "fields": {
+            "note": 1,
+            "tag": 6
+        }
+    },
+    {
+        "model": "swoleapi.note_tag",
+        "pk": 3,
+        "fields": {
+            "note": 2,
+            "tag": 12
+        }
+    },
+    {
+        "model": "swoleapi.note_tag",
+        "pk": 4,
+        "fields": {
+            "note": 2,
+            "tag": 4
+        }
+    },
+    {
+        "model": "swoleapi.note_tag",
+        "pk": 5,
+        "fields": {
+            "note": 3,
+            "tag": 2
+        }
+    }
+]
