@@ -16,9 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from swoleapi.views import register_user, login_user
+from rest_framework import routers
+from django.conf.urls import include
+from swoleapi.views.ExerciseView import ExerciseView
+from swoleapi.views.SessionView import SessionView
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'sessions', SessionView, 'session')
+router.register(r'exercises', ExerciseView, 'exercise')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register', register_user),
     path('login', login_user),
+    path('', include(router.urls)),
 ]

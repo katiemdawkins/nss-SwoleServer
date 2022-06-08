@@ -7,7 +7,10 @@ class Session(models.Model):
     rating = models.IntegerField()  
 
 
-
-
-
-#custom properties for set, reps, load??
+    @property
+    def exercisesInSession(self):
+        return self.__exercisesInSession
+    
+    @exercisesInSession.setter
+    def exercisesInSession(self, value):
+        self.__exercisesInSession = value
