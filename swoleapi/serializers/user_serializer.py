@@ -16,4 +16,12 @@ class SwoleUserSerializer(serializers.ModelSerializer):
         model = Swole_User
         fields = ("id", "user", "profile_picture_url")
         
+class SwoleUserForSessionSerializer(serializers.ModelSerializer):
+    """JSON Serializer for Swole_Users"""
+    user = UserSerializer()
+    
+    class Meta:
+        model = Swole_User
+        fields = ("id", "user")
+        
         

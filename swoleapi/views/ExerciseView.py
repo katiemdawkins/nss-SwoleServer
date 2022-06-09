@@ -7,7 +7,7 @@ from swoleapi.models import Exercise
 from swoleapi.serializers.exercise_serializer import ExerciseSerializer
 
 class ExerciseView(ViewSet):
-    """Swole Session View"""
+    """Swole Exercise View"""
     
     def retrieve(self, request, pk):
         """Handle GET requests for single exercise
@@ -22,7 +22,7 @@ class ExerciseView(ViewSet):
             return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
 
-#################add filters to list view tomorrow!!!!!!!!!!
+
     def list(self, request):
         """Handel Get Requests to get all exercises"""
         

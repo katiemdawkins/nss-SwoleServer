@@ -19,11 +19,15 @@ from swoleapi.views import register_user, login_user
 from rest_framework import routers
 from django.conf.urls import include
 from swoleapi.views.ExerciseView import ExerciseView
-from swoleapi.views.SessionView import SessionView
+from swoleapi.views.SessionView import TrainingLogView
+from swoleapi.views.BodyPartView import BodyPartView
+from swoleapi.views.CategoryView import CategoryView
 
 router = routers.DefaultRouter(trailing_slash=False)
-router.register(r'sessions', SessionView, 'session')
+router.register(r'training_log', TrainingLogView, 'training_log')
 router.register(r'exercises', ExerciseView, 'exercise')
+router.register(r'categories', CategoryView, 'category')
+router.register(r'body_parts', BodyPartView, 'body_part')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
