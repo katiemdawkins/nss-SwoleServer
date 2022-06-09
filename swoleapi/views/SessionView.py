@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from swoleapi.models.exercise_in_session import Exercise_In_Session
 from swoleapi.models.session import Session
+from swoleapi.models.swole_user import Swole_User
 from swoleapi.serializers.session_serializer import ExerciseInSessionSerializer, SessionSerializer
 
 class TrainingLogView(ViewSet):
@@ -29,12 +30,9 @@ class TrainingLogView(ViewSet):
 
     def list(self, request):
         """Handle GET Requests to get all sessions"""
-        #user = Swole_User.objects.get(user=reque)
-        sessions = Session.objects.all()
         
-        get_by_user = self.request.query_params.get('user_id', None)
-        if get_by_user is not None:
-            sessions = Session.objects.filter(user_id = get_by_user)
+        sessions = Session.objects.all().order_by('date')
+        swole_user = Swole_User.objects.get(user=request.auth.user)
             
         serializer = SessionSerializer(sessions, many=True)
         return Response(serializer.data)
