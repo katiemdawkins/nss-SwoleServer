@@ -22,9 +22,11 @@ from swoleapi.views.ExerciseView import ExerciseView
 from swoleapi.views.SessionView import TrainingLogView
 from swoleapi.views.BodyPartView import BodyPartView
 from swoleapi.views.CategoryView import CategoryView
+from swoleapi.views.ExerciseInSessionView import ExerciseInSessionView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'training_log', TrainingLogView, 'training_log')
+router.register(r'exercises_in_session', ExerciseInSessionView, 'exercise_in_session')
 router.register(r'exercises', ExerciseView, 'exercise')
 router.register(r'categories', CategoryView, 'category')
 router.register(r'body_parts', BodyPartView, 'body_part')

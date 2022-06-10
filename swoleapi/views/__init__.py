@@ -4,3 +4,4 @@ from .SessionView import TrainingLogView
 from .ExerciseView import ExerciseView
 from .CategoryView import CategoryView
 from .BodyPartView import BodyPartView
+from .ExerciseInSessionView import ExerciseInSessionView
