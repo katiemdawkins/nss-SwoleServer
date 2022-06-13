@@ -19,7 +19,8 @@ from swoleapi.views import register_user, login_user
 from rest_framework import routers
 from django.conf.urls import include
 from swoleapi.views.ExerciseView import ExerciseView
-from swoleapi.views.SessionView import TrainingLogView
+
+from swoleapi.views.TrainingLogView import TrainingLogView
 from swoleapi.views.BodyPartView import BodyPartView
 from swoleapi.views.CategoryView import CategoryView
 from swoleapi.views.ExerciseInSessionView import ExerciseInSessionView

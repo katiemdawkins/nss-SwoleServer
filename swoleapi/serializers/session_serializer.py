@@ -42,7 +42,7 @@ class CreateSessionSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Session
-        fields = ("id", "date", "user")
+        fields = ("id", "date")
         
 #---------Update--------
 class UpdateSessionSerializer(serializers.ModelSerializer):
