@@ -23,13 +23,13 @@ class TrainingLogView(ViewSet):
         """
         try:
             #get all exercises in session 
-            exercisesInSession = Exercise_In_Session.objects.filter(session = pk)
-            exercisesInSession = ExerciseInSessionSerializer(exercisesInSession, many= True)
+            # exercisesInSession = Exercise_In_Session.objects.filter(session = pk)
+            # exercisesInSession = ExerciseInSessionSerializer(exercisesInSession, many= True)
             
             #get session
             session = Session.objects.get(pk=pk)
             serializer = SessionSerializer(session)
-            return Response (serializer.data)
+            return Response (serializer.data, status=status.HTTP_200_OK)
         except Session.DoesNotExist as ex:
             return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
@@ -40,7 +40,7 @@ class TrainingLogView(ViewSet):
         swole_user = Swole_User.objects.get(user=request.auth.user)
             
         serializer = SessionSerializer(sessions, many=True)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
     
     
     def create(self, request):
@@ -53,11 +53,15 @@ class TrainingLogView(ViewSet):
         
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
+    def destroy(self, request, pk):
+        session = Session.objects.get(pk=pk)
+        session.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
     
-    #custom action that changes false to true on is_completed
+    #custom action that changes false to true on is_complete
     @action(methods=['Put'],detail=True)
     def isCompleteTrue(self, request, pk):
-        """"Put Request """
+        """"Put Request to complete a session"""
 
         session = Session.objects.get(pk=pk, user=request.auth.user.id)
         session.date = request.data['date']

@@ -15,7 +15,7 @@ class BodyPartView(ViewSet):
         try:
             body_part = Body_Part.objects.get(pk=pk)
             serializer = BodyPartSerializer(body_part)
-            return Response (serializer.data)
+            return Response (serializer.data, status=status.HTTP_200_OK)
         except Body_Part.DoesNotExist as ex:
             return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         
@@ -23,4 +23,4 @@ class BodyPartView(ViewSet):
         """Handle GET requests for all Body Parts"""
         body_parts = Body_Part.objects.all()
         serializer = BodyPartSerializer(body_parts, many=True)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)

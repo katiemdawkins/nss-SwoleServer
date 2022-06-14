@@ -22,10 +22,15 @@ class ExInSessSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Exercise_In_Session
-        fields = ('exercise', 'set_number', 'load')
+        fields = ('exercise', 'session', 'set_number', 'load', 'reps')
         depth = 1
 
-        
+class UpdateExerciseInSessionSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Exercise_In_Session
+        fields = ("id", 'exercise', 'session', 'set_number', 'reps', 'load')   
+            
 class SessionSerializer(serializers.ModelSerializer):
     """JSON Serializer for Sessions"""
     user = SwoleUserForSessionSerializer()
@@ -49,4 +54,4 @@ class UpdateSessionSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Session
-        fields = ("id", "date", "rating", "user")
+        fields = ("id", "date", "rating", "user", "is_complete")

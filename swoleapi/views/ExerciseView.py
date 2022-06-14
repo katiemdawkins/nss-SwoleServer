@@ -17,7 +17,7 @@ class ExerciseView(ViewSet):
         try:
             exercise = Exercise.objects.get(pk=pk)
             serializer = ExerciseSerializer(exercise)
-            return Response (serializer.data)
+            return Response (serializer.data, status=status.HTTP_200_OK)
         except Exercise.DoesNotExist as ex:
             return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
@@ -42,7 +42,7 @@ class ExerciseView(ViewSet):
             exercises = exercises.filter(body_part__id=body_part)
                 
         serializer = ExerciseSerializer(exercises, many=True)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
     
     #Stretch goal functionality ..........
     # def create(self, request):
