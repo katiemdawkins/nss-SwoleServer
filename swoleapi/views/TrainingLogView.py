@@ -28,6 +28,9 @@ class TrainingLogView(ViewSet):
             
             #get session
             session = Session.objects.get(pk=pk)
+            # exercises = Exercise.objects.filter(Sessions__session_id = self.pk)
+            # for exercise in exercises:
+            #     exercise.Sessions.set(exercise.Sessions.filter(session=session))
             serializer = SessionSerializer(session)
             return Response (serializer.data, status=status.HTTP_200_OK)
         except Session.DoesNotExist as ex:
@@ -36,13 +39,13 @@ class TrainingLogView(ViewSet):
     def list(self, request):
         """Handle GET Requests to get all sessions"""
         
-        sessions = Session.objects.all().order_by("-date")
+        sessions = Session.objects.all().order_by("-id")
         swole_user = Swole_User.objects.get(user=request.auth.user)
             
         serializer = SessionSerializer(sessions, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
-    
+    #when user clicks start session
     def create(self, request):
         """Handle POST Requests for New Sessions"""
         user = Swole_User.objects.get(pk=request.auth.user.id)
@@ -53,12 +56,13 @@ class TrainingLogView(ViewSet):
         
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
+    #user can delete a session in the Training log, user can cancel(delete) a session mid session 
     def destroy(self, request, pk):
         session = Session.objects.get(pk=pk)
         session.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
-    #custom action that changes false to true on is_complete
+    #when user clicks Finish Session -custom action that changes false to true on is_complete
     @action(methods=['Put'],detail=True)
     def isCompleteTrue(self, request, pk):
         """"Put Request to complete a session"""
@@ -72,8 +76,15 @@ class TrainingLogView(ViewSet):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_204_NO_CONTENT)   
         
-
-
+    #when user adds a rating to a session before finishing
+    def update(self, request, pk):
+        """Handles Put Requests for Session"""
+        
+        session = Session.objects.get(pk=pk)
+        serializer = UpdateSessionSerializer(session, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response (None, status=status.HTTP_204_NO_CONTENT)
 
 
 

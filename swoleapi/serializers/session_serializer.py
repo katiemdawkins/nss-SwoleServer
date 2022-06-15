@@ -6,9 +6,11 @@ from swoleapi.models.exercise import Exercise
 from swoleapi.serializers.user_serializer import SwoleUserForSessionSerializer
 
 class ExerciseSerializerForSession(serializers.ModelSerializer):
+    
     class Meta:
         model = Exercise
-        fields = ('id', "name")
+        fields = ('id', "name", "Sessions")
+        depth= 1
 
 class ExerciseInSessionSerializer(serializers.ModelSerializer):
     
@@ -35,11 +37,12 @@ class SessionSerializer(serializers.ModelSerializer):
     """JSON Serializer for Sessions"""
     user = SwoleUserForSessionSerializer()
     Exercises_in_Session = ExInSessSerializer(many=True)
+    #currentExercises = ExerciseSerializerForSession(many=True)
     
     class Meta:
         model = Session
-        fields = ("id", "date", "rating", "user", "Exercises_in_Session", "is_complete")
-        depth = 1
+        fields = ("id", "date", "rating", "user", "Exercises_in_Session", "is_complete", "currentExercises")
+        depth = 2
     
 #---------Create--------
 
