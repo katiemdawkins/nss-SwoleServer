@@ -6,3 +6,4 @@ class CreateExerciseInSession(serializers.ModelSerializer):
     class Meta:
         model = Exercise_In_Session
         fields = ("id","exercise", "session", "set_number", "load", "reps")
+        

@@ -15,15 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from swoleapi.views import register_user, login_user
+from swoleapi.views import ExerciseNoteView, register_user, login_user
 from rest_framework import routers
 from django.conf.urls import include
 from swoleapi.views.ExerciseView import ExerciseView
+from swoleapi.views.TagView import TagView
 
 from swoleapi.views.TrainingLogView import TrainingLogView
 from swoleapi.views.BodyPartView import BodyPartView
 from swoleapi.views.CategoryView import CategoryView
 from swoleapi.views.ExerciseInSessionView import ExerciseInSessionView
+from swoleapi.views.ExerciseNoteView import ExerciseNoteView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'training_log', TrainingLogView, 'training_log')
@@ -31,6 +33,8 @@ router.register(r'exercises_in_session', ExerciseInSessionView, 'exercise_in_ses
 router.register(r'exercises', ExerciseView, 'exercise')
 router.register(r'categories', CategoryView, 'category')
 router.register(r'body_parts', BodyPartView, 'body_part')
+router.register(r'exercise_notes', ExerciseNoteView, 'exercise_note')
+router.register(r'tags', TagView, 'tag')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
