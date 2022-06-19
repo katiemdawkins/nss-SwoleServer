@@ -6,5 +6,37 @@
             "user": 1,
             "profile_picture_url": "https://www.google.com/search?q=image+strong+arm&sxsrf=ALiCzsZLJduBK0Q3spyoKFpKEdUERILgIw:1654627578091&tbm=isch&source=iu&ictx=1&vet=1&fir=v4ujmHciE6B5kM%252CIyXWgXnKUNbduM%252C_%253B_cvLsuMPqGJ8FM%252CLAv_v8a63dbJ2M%252C_%253BhQ5vC8GZ06z5MM%252CfqHupkT-atC_KM%252C_%253BJd359N4J_3T8VM%252CFZuhwYJ2pUmSZM%252C_%253BwGK-BW-nyDjY-M%252CmpFU5AXt_OU2fM%252C_%253BBTW05V6rl9F5qM%252CxzEciuAsQWJ79M%252C_%253B7NxVspeKi8mkLM%252CY3lGCWtyMH9_fM%252C_%253BxnrqTIXMTYjlcM%252CvTV8-uV5O94eaM%252C_%253BDJDm3B6iRO6xAM%252CKilhiHZrllyqlM%252C_%253By-YwcH2vgowFtM%252CnKZgCRhiw38msM%252C_%253BLK2PrQgCT6XlpM%252CjSyFrhbE_MLjhM%252C_%253BZIDHq31406UM9M%252CqvQ84jf-ZBjE8M%252C_%253B4XEqNdqRNkomnM%252CmpFU5AXt_OU2fM%252C_%253BIdHgzeLNI0gBmM%252CnKZgCRhiw38msM%252C_%253BlzN5j5qBEBBlLM%252CxzEciuAsQWJ79M%252C_%253Bu0z3IJ2VNbvlQM%252CV4hGW9vzqOljyM%252C_&usg=AI4_-kTCdufyH5Ms2om0R06XlBtY29semw&sa=X&ved=2ahUKEwiEgJyIgJz4AhURsYQIHUiqC6sQ9QF6BAgaEAE#imgrc=hQ5vC8GZ06z5MM"
         }
+    },
+    {
+        "model": "swoleapi.swole_user",
+        "pk": 4,
+        "fields": {
+            "user": 2,
+            "profile_picture_url": "💪"
+        }
+    },
+    {
+        "model": "swoleapi.swole_user",
+        "pk": 5,
+        "fields": {
+            "user": 3,
+            "profile_picture_url": "💪"
+        }
+    },
+    {
+        "model": "swoleapi.swole_user",
+        "pk": 6,
+        "fields": {
+            "user": 4,
+            "profile_picture_url": "💪"
+        }
+    },
+    {
+        "model": "swoleapi.swole_user",
+        "pk": 7,
+        "fields": {
+            "user": 5,
+            "profile_picture_url": "💪"
+        }
     }
 ]

@@ -6,6 +6,8 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework import status
 
+from swoleapi.models.swole_user import Swole_User
+
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -42,14 +44,20 @@ def register_user(request):
 
     # TODO: this is only adding the username and password, if you want to add in more user fields like first and last name update this code
     new_user = User.objects.create_user(
+        first_name=request.data['first_name'],
+        last_name=request.data['last_name'],
+        email=request.data['email'],
         username=request.data['username'],
         password=request.data['password'],
     )
 
     # TODO: If you're using a model with a 1 to 1 relationship to the django user, create that object here
-
+    swole_user = Swole_User.objects.create(
+        user= new_user,
+        profile_picture_url=request.data['profile_picture_url']
+    )
     
-    token = Token.objects.create(user=new_user)
+    token = Token.objects.create(user=swole_user.user)
     # TODO: If you need to send the client more information update the data dict
     
     data = { 'token': token.key }

@@ -22,10 +22,6 @@ class TrainingLogView(ViewSet):
             Response--JSON serialized session
         """
         try:
-            #get all exercises in session 
-            # exercisesInSession = Exercise_In_Session.objects.filter(session = pk)
-            # exercisesInSession = ExerciseInSessionSerializer(exercisesInSession, many= True)
-            
             #get session
             session = Session.objects.get(pk=pk)
             # exercises = Exercise.objects.filter(Sessions__session_id = self.pk)

@@ -7,3 +7,4 @@ from .BodyPartView import BodyPartView
 from .ExerciseInSessionView import ExerciseInSessionView
 from .ExerciseNoteView import ExerciseNoteView
 from .TagView import TagView
+from .SwoleUserView import SwoleUserView
