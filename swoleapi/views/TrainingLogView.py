@@ -36,7 +36,10 @@ class TrainingLogView(ViewSet):
         """Handle GET Requests to get all sessions"""
         
         sessions = Session.objects.all().order_by("-id")
-        swole_user = Swole_User.objects.get(user=request.auth.user)
+        user = request.query_params.get("user", None)
+        
+        if user is not None:
+            sessions = sessions.filter(user__id=user)
             
         serializer = SessionSerializer(sessions, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)

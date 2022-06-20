@@ -11,7 +11,7 @@ class SwoleUserView(ViewSet):
 
     def retrieve(self,request, pk):
         try:
-            swole_user=Swole_User.objects.get(pk=pk)
+            swole_user=Swole_User.objects.get(user=request.auth.user)
             serializer = SwoleUserSerializer(swole_user)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Swole_User.DoesNotExist as ex:
