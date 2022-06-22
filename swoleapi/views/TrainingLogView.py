@@ -7,7 +7,7 @@ from swoleapi.models.exercise_in_session import Exercise_In_Session
 from swoleapi.models.session import Session
 from swoleapi.models.exercise import Exercise
 from swoleapi.models.swole_user import Swole_User
-from swoleapi.serializers.session_serializer import CreateSessionSerializer
+from swoleapi.serializers.session_serializer import CreateSessionSerializer, ShortSessionSerializer, TrainingLogSessionSerializer
 from swoleapi.serializers.session_serializer import UpdateSessionSerializer
 from rest_framework.decorators import action
 from swoleapi.serializers.session_serializer import  ExerciseInSessionSerializer, SessionSerializer
@@ -22,26 +22,28 @@ class TrainingLogView(ViewSet):
             Response--JSON serialized session
         """
         try:
-            #get session
             session = Session.objects.get(pk=pk)
-            # exercises = Exercise.objects.filter(Sessions__session_id = self.pk)
-            # for exercise in exercises:
-            #     exercise.Sessions.set(exercise.Sessions.filter(session=session))
+
             serializer = SessionSerializer(session)
             return Response (serializer.data, status=status.HTTP_200_OK)
         except Session.DoesNotExist as ex:
             return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
+    #when user is on Training Log and wants to view all their sessions
     def list(self, request):
         """Handle GET Requests to get all sessions"""
         
         sessions = Session.objects.all().order_by("-id")
         user = request.query_params.get("user", None)
+        is_complete = request.query_params.get("is_complete", None)
         
         if user is not None:
             sessions = sessions.filter(user__id=user)
             
-        serializer = SessionSerializer(sessions, many=True)
+        if is_complete is not None:
+            sessions = sessions.filter(is_complete=True)
+                
+        serializer = TrainingLogSessionSerializer(sessions, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     #when user clicks start session
@@ -84,6 +86,44 @@ class TrainingLogView(ViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response (None, status=status.HTTP_204_NO_CONTENT)
+    
+    
+    #custom action to get all ratings? 
+    #get all user sessions 
+    #if session is complete, add all session ratings 
+    # / total number of complete sessions 
+    
+    #custom action to get completed sessions for a user
+    #ShortSession serializer
+    @action(methods=['GET'], detail =False)
+    def getSessionsForRatings(self, request):
+        
+        sessions = Session.objects.all()
+        user = request.query_params.get("user", None)
+        is_complete = request.query_params.get("is_complete", None)
+        
+        if user is not None:
+            sessions = sessions.filter(user__id=user)
+        if is_complete is not None:
+            sessions = sessions.filter(is_complete=True)
+        
+        ratings = []
+        for session in sessions:
+            ratings.append(session.rating)
+        print(ratings)
+            
+            # total_rating = 0
+            # for rating in ratings: 
+            #     total_rating += session.rating
+            
+                
+            # ave_rating =0
+            # if len(ratings) !=0:
+            #     ave_rating = total_rating/ len(ratings)
+            #     return ave_rating
+    
+        serializer = ShortSessionSerializer(sessions, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 
