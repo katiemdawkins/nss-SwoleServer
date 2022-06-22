@@ -7,7 +7,7 @@ from swoleapi.models.exercise_in_session import Exercise_In_Session
 from swoleapi.models.session import Session
 from swoleapi.models.exercise import Exercise
 from swoleapi.models.swole_user import Swole_User
-from swoleapi.serializers.session_serializer import CreateSessionSerializer, ShortSessionSerializer
+from swoleapi.serializers.session_serializer import CreateSessionSerializer, ShortSessionSerializer, TrainingLogSessionSerializer
 from swoleapi.serializers.session_serializer import UpdateSessionSerializer
 from rest_framework.decorators import action
 from swoleapi.serializers.session_serializer import  ExerciseInSessionSerializer, SessionSerializer
@@ -43,7 +43,7 @@ class TrainingLogView(ViewSet):
         if is_complete is not None:
             sessions = sessions.filter(is_complete=True)
                 
-        serializer = SessionSerializer(sessions, many=True)
+        serializer = TrainingLogSessionSerializer(sessions, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     #when user clicks start session
