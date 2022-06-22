@@ -26,7 +26,7 @@ class ExerciseView(ViewSet):
     def list(self, request):
         """Handel Get Requests to get all exercises"""
         
-        exercises = Exercise.objects.all()
+        exercises = Exercise.objects.all().order_by("name")
         
         name = request.query_params.get('name', None)
         category = request.query_params.get('category', None)

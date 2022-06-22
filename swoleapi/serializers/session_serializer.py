@@ -5,8 +5,14 @@ from swoleapi.models.session import Session
 from swoleapi.models.exercise import Exercise
 from swoleapi.serializers.user_serializer import SwoleUserForSessionSerializer
 
+# class EISForList(serializers.ModelSerializer):
+#     class Meta:
+#         model = Exercise_In_Session
+#         fields = ("id",'session','set_number', 'reps', 'load', "date")
+#         depth = 1
+
 class ExerciseSerializerForSession(serializers.ModelSerializer):
-    
+    #Sessions = 
     class Meta:
         model = Exercise
         fields = ('id', "name", "Sessions")
@@ -19,10 +25,16 @@ class ExerciseInSessionSerializer(serializers.ModelSerializer):
         fields = ("id", 'exercise', 'session','set_number', 'reps', 'load')
         depth = 1
         
-
+class SessionForExInSessSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Session
+        fields = ('id', )
+        depth = 1
 
 class ExInSessSerializer(serializers.ModelSerializer):
     exercise = ExerciseSerializerForSession()
+    session = SessionForExInSessSerializer()
     
     class Meta:
         model = Exercise_In_Session
@@ -43,9 +55,17 @@ class SessionSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Session
-        fields = ("id", "date", "rating", "user", "Exercises_in_Session", "is_complete", "currentExercises")
+        fields = ("id", "date", "rating", "user", "is_complete", "Exercises_in_Session", "currentExercises")
         depth = 2
+ 
+###Abbreviated Session Serializer
+class ShortSessionSerializer(serializers.ModelSerializer):
+    """JSON Serializer for Sessions"""
     
+    class Meta:
+        model = Session
+        fields = ("id", "date", "rating", "user", "is_complete", 'averageRating' )
+
 #---------Create--------
 
 class CreateSessionSerializer(serializers.ModelSerializer):
