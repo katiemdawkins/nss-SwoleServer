@@ -110,18 +110,18 @@ class TrainingLogView(ViewSet):
         ratings = []
         for session in sessions:
             ratings.append(session.rating)
-        print(ratings)
             
-            # total_rating = 0
-            # for rating in ratings: 
-            #     total_rating += session.rating
-            
+        total_rating = 0
+        for rating in ratings: 
+            total_rating += rating   
                 
-            # ave_rating =0
-            # if len(ratings) !=0:
-            #     ave_rating = total_rating/ len(ratings)
-            #     return ave_rating
-    
+        ave_rating =0
+        if len(ratings) !=0:
+            ave_rating = total_rating/ len(ratings)
+
+        for session in sessions:
+            session.averageRating = round(ave_rating)
+
         serializer = ShortSessionSerializer(sessions, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
