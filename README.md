@@ -16,5 +16,5 @@ Finally users, can go to their profile to see their average rating of their trai
 2. Create virtual environment: pipenv shell
 3. Install Requirements: pipenv install
 4. Run makemigrations, migrate, and loaddata to set up server models and dummy data
-5. Clone, open and run [React Client] (https://github.com/katiemdawkins/nss-SwoleClient)
+5. Clone, open and run [React Client](https://github.com/katiemdawkins/nss-SwoleClient)
 
