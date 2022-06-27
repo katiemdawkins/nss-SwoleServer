@@ -24,7 +24,7 @@ def login_user(request):
 
     if authenticated_user is not None:
         token = Token.objects.get(user=authenticated_user)
-        # TODO: If you need to return more information to the client, update the data dict
+        
         data = {
             'valid': True,
             'token': token.key
@@ -39,10 +39,10 @@ def register_user(request):
     '''Handles the creation of a new gamer for authentication
 
     Method arguments:
-      request -- The full HTTP request object
+    request -- The full HTTP request object
     '''
 
-    # TODO: this is only adding the username and password, if you want to add in more user fields like first and last name update this code
+    
     new_user = User.objects.create_user(
         first_name=request.data['first_name'],
         last_name=request.data['last_name'],
@@ -51,14 +51,14 @@ def register_user(request):
         password=request.data['password'],
     )
 
-    # TODO: If you're using a model with a 1 to 1 relationship to the django user, create that object here
+    
     swole_user = Swole_User.objects.create(
         user= new_user,
         profile_picture_url=request.data['profile_picture_url']
     )
     
     token = Token.objects.create(user=swole_user.user)
-    # TODO: If you need to send the client more information update the data dict
+    
     
     data = { 'token': token.key }
     return Response(data, status=status.HTTP_201_CREATED)

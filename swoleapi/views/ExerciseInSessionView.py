@@ -12,6 +12,7 @@ from swoleapi.serializers.session_serializer import ExerciseInSessionSerializer,
 
 class ExerciseInSessionView(ViewSet):
     
+    #will use this for displaying Exercise Name During Session
     def retrieve(self, request, pk):
         try:
             exercise_in_session = Exercise_In_Session.objects.get(pk=pk)

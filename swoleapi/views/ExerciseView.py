@@ -9,6 +9,7 @@ from swoleapi.serializers.exercise_serializer import ExerciseSerializer
 class ExerciseView(ViewSet):
     """Swole Exercise View"""
     
+    #get a single exercise by id for exercise details page
     def retrieve(self, request, pk):
         """Handle GET requests for single exercise
         Returns:
@@ -22,7 +23,8 @@ class ExerciseView(ViewSet):
             return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
 
-
+    #filter the exercise list by name, category, and body part for Exercise Page and Add Exercise to Session Page
+    #order list by name
     def list(self, request):
         """Handel Get Requests to get all exercises"""
         

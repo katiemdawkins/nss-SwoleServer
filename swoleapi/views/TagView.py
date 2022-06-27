@@ -11,6 +11,7 @@ from swoleapi.serializers.tag_serializer import TagSerializer, CreateTagSerializ
 
 class TagView(ViewSet):
     
+    #get a single tag by id
     def retrieve(self, request, pk):
         try:
             tag= Tag.objects.get(pk=pk)
@@ -19,7 +20,7 @@ class TagView(ViewSet):
         except Tag.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
     
-    
+    #get all tags ordered by label
     def list(self, request):
         tags = Tag.objects.all().order_by('label')
         serializer = TagSerializer(tags, many=True)

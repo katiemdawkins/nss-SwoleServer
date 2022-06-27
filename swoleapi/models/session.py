@@ -9,7 +9,6 @@ class Session(models.Model):
     rating = models.IntegerField(default=1)  
     is_complete = models.BooleanField(default=False)
 
-#default=1 on rating? then clicking finish button updates is_complete and rating
 
     @property
     def currentExercises(self):
@@ -26,19 +25,3 @@ class Session(models.Model):
     @averageRating.setter
     def averageRating(self,value):
         self.__averageRating=value 
-    # @property
-    # def average_rating(self):
-    #     """Average rating calculated attribute for each session"""
-    #     ratings = self.ratings.all()
-
-    #     # Sum all of the ratings for sessions
-    #     total_rating = 0
-    #     for rating in ratings:
-    #         total_rating += rating.rating
-
-    #     # Calculate the averge and return it.
-    #     ave_rating =0 
-    #     if len(ratings) !=0:
-    #         ave_rating = total_rating / len(ratings)
-    #     #return the result
-    #     return ave_rating
