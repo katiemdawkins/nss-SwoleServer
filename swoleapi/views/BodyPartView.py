@@ -10,6 +10,8 @@ from swoleapi.serializers.body_part_serializer import BodyPartSerializer
 class BodyPartView(ViewSet):
     """Body Part View"""
     
+    #Get Single Body Part for Exercise Lists
+    
     def retrieve(self, request, pk):
         """Handle GET Requests for Single Body_Part"""
         try:
@@ -18,7 +20,9 @@ class BodyPartView(ViewSet):
             return Response (serializer.data, status=status.HTTP_200_OK)
         except Body_Part.DoesNotExist as ex:
             return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-        
+    
+    #Get All Body Parts for Exercise Lists
+    
     def list(self, request):
         """Handle GET requests for all Body Parts"""
         body_parts = Body_Part.objects.all()

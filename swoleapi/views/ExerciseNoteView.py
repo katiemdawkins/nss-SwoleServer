@@ -21,24 +21,22 @@ class ExerciseNoteView(ViewSet):
             return Response (serializer.data, status=status.HTTP_200_OK)
         except Exercise_Note.DoesNotExist as ex:
             return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-        
+    
+    #filtering notes list for Notes with Exercise In Session Id    
     def list(self, request):
         """handel GET requests for all Exercise Notes"""
         exercise_notes= Exercise_Note.objects.all()
-        #filter for user and exercise in session id? and session? exerciseInSession.session.id?
+        
         exercise_in_session = request.query_params.get('exercise_in_session', None)   
-        # exercise = request.query_params.get('exercise', None)
         
         if exercise_in_session is not None:
             exercise_notes = exercise_notes.filter(exercise_in_session__id=exercise_in_session)
         
-        # if exercise is not None:
-        #     exercise_notes = exercise_notes.filter(exercise__id=exercise)
             
         serializer = ExerciseNoteSerializer(exercise_notes, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
         
-    
+    #when a user is adding a new set 
     def create(self, request):
         """Post Request for Exercise Note"""
         exercise_in_session = Exercise_In_Session.objects.get(pk=request.data['exercise_in_session'])
@@ -49,7 +47,7 @@ class ExerciseNoteView(ViewSet):
         
 
     
-    #update note to include tags
+    #after getLastNote, update note to include tags
     def update(self, request, pk): 
         exercise_note = Exercise_Note.objects.get(pk=pk)
         exercise_in_session = Exercise_In_Session.objects.get(pk=request.data["exercise_in_session"])
@@ -59,7 +57,7 @@ class ExerciseNoteView(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
         
 
-            
+    #When user submits a note, get that note so they can add tags to it.
     @action(methods=['get'], detail=False)
     def getLastNote(self, request):
         exercise_notes= Exercise_Note.objects.all().last()

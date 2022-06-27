@@ -57,13 +57,13 @@ class TrainingLogView(ViewSet):
         
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
-    #user can delete a session in the Training log, user can cancel(delete) a session mid session 
+    #user can delete a session in the Training log 
     def destroy(self, request, pk):
         session = Session.objects.get(pk=pk)
         session.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
-    #when user clicks Finish Session -custom action that changes false to true on is_complete
+    #when user clicks Finish Session - this custom action changes false to true on is_complete
     @action(methods=['Put'],detail=True)
     def isCompleteTrue(self, request, pk):
         """"Put Request to complete a session"""
@@ -88,13 +88,9 @@ class TrainingLogView(ViewSet):
         return Response (None, status=status.HTTP_204_NO_CONTENT)
     
     
-    #custom action to get all ratings? 
-    #get all user sessions 
-    #if session is complete, add all session ratings 
-    # / total number of complete sessions 
-    
     #custom action to get completed sessions for a user
-    #ShortSession serializer
+    #and calculate their average rating
+    #ShortSession serializer to get less data back
     @action(methods=['GET'], detail =False)
     def getSessionsForRatings(self, request):
         

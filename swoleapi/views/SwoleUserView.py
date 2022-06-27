@@ -9,6 +9,7 @@ from swoleapi.serializers.user_serializer import SwoleUserSerializer
 
 class SwoleUserView(ViewSet):
 
+    #get the logged in user
     def retrieve(self,request, pk):
         try:
             swole_user=Swole_User.objects.get(user=request.auth.user)
@@ -17,6 +18,7 @@ class SwoleUserView(ViewSet):
         except Swole_User.DoesNotExist as ex:
             return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
     
+    #get all users
     def list(self, request):
         swole_users=Swole_User.objects.all()
         serializer = SwoleUserSerializer(swole_users, many=True)

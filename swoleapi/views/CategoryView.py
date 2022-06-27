@@ -9,6 +9,7 @@ from swoleapi.serializers.category_serializer import CategorySerializer
 class CategoryView(ViewSet):
     """Category View"""
     
+    #Get Single Category for Exercise List
     def retrieve(self, request, pk):
         """Handle GET Requests for Single Category"""
         try:
@@ -17,7 +18,8 @@ class CategoryView(ViewSet):
             return Response (serializer.data, status=status.HTTP_200_OK)
         except Category.DoesNotExist as ex:
             return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-        
+    
+    #Get All Categories for Exercise List
     def list(self, request):
         """Handle GET requests for all Categories"""
         categories = Category.objects.all()
