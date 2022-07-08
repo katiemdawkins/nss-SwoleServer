@@ -66,4 +66,8 @@ class ExerciseView(ViewSet):
         serializer.save(current_user=exercise__current_user)
         
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-        
+    
+    def destroy(self, request, pk):
+        exercise = Exercise.objects.get(pk=pk)
+        exercise.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
