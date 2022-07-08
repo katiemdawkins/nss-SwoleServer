@@ -4,7 +4,10 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from swoleapi.models import Exercise
-from swoleapi.serializers.exercise_serializer import ExerciseSerializer
+from swoleapi.models.body_part import Body_Part
+from swoleapi.models.swole_user import Swole_User
+from swoleapi.models.category import Category
+from swoleapi.serializers.exercise_serializer import CreateExerciseSerializer, ExerciseSerializer
 
 class ExerciseView(ViewSet):
     """Swole Exercise View"""
@@ -30,9 +33,12 @@ class ExerciseView(ViewSet):
         
         exercises = Exercise.objects.all().order_by("name")
         
+        #current_user = request.data['current_user']
+        
         name = request.query_params.get('name', None)
         category = request.query_params.get('category', None)
         body_part = request.query_params.get('body_part', None)
+
         
         if name is not None:
             exercises = exercises.filter(name__icontains=name)
@@ -42,12 +48,22 @@ class ExerciseView(ViewSet):
             
         if body_part is not None:
             exercises = exercises.filter(body_part__id=body_part)
+            
+        # for exercise in exercises:
+        #     exercise.current_user = current_user
                 
         serializer = ExerciseSerializer(exercises, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     #Stretch goal functionality ..........
-    # def create(self, request):
-    #     """Handle POST operations"""
+    def create(self, request):
+        """Handle POST operations"""
         
+        exercise__current_user = request.auth.user.id
+        
+        serializer = CreateExerciseSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(current_user=exercise__current_user)
+        
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
         
