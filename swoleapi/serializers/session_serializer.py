@@ -26,7 +26,7 @@ class ShortExInSessSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Exercise_In_Session
-        fields = ('exercise', 'session', 'set_number', 'load', 'reps')
+        fields = ('id','exercise', 'session', 'set_number', 'load', 'reps')
         depth = 1     
 
 ##############################
@@ -51,7 +51,7 @@ class ExInSessSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Exercise_In_Session
-        fields = ('exercise', 'session', 'set_number', 'load', 'reps')
+        fields = ('id', 'exercise', 'session', 'set_number', 'load', 'reps')
         depth = 1
 
 class UpdateExerciseInSessionSerializer(serializers.ModelSerializer):

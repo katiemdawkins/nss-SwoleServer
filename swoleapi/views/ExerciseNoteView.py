@@ -27,10 +27,10 @@ class ExerciseNoteView(ViewSet):
         """handel GET requests for all Exercise Notes"""
         exercise_notes= Exercise_Note.objects.all()
         
-        exercise_in_session = request.query_params.get('exercise_in_session', None)   
+        exercise_in_session = request.query_params.get('exercise_in_session', None)
         
         if exercise_in_session is not None:
-            exercise_notes = exercise_notes.filter(exercise_in_session__id=exercise_in_session)
+            exercise_notes = exercise_notes.filter(exercise_in_session__session__id=exercise_in_session)
         
             
         serializer = ExerciseNoteSerializer(exercise_notes, many=True)
