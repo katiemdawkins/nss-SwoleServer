@@ -121,7 +121,15 @@ class TrainingLogView(ViewSet):
         serializer = ShortSessionSerializer(sessions, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    @action(methods=['GET'], detail =True)
+    def getSessionDetails(self, request, pk):
+        try:
+            session = Session.objects.get(pk=pk)
 
+            serializer = TrainingLogSessionSerializer(session)
+            return Response (serializer.data, status=status.HTTP_200_OK)
+        except Session.DoesNotExist as ex:
+            return Response ({'message':ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
 
 
